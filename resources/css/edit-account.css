@@ -1,0 +1,21 @@
+body {
+    background-color: #fff;
+}
+
+.edit {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin:  10em auto;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-items: center;
+}
+
+.edit-form {
+    position: relative;
+    text-align: center;
+    background-color: #EEEEEE;
+    padding: 80px;
+    display: block;
+}
