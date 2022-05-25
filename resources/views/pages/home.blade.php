@@ -49,6 +49,49 @@
         </div>
     </div>
 
+    @if ( Auth::user()->is_admin )
+    <div class="users-list">
+        <h1>Зарегистрированные клиенты</h1>
+
+        <div class="users-table">
+            <table>
+                @foreach ($users as $user)
+                <tr>
+                    <th>ФИО</th>
+                    <th>Пол</th>
+                    <th>Возраст</th>
+                    <th>Email</th>
+                    <th>Дата регистрации</th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td>{{ $user->fio }}</td>
+                    <td>{{ $user->sex }}</td>
+                    <td>{{ $user->age }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->created_at->format('d.m.Y') }}</td>
+                    <td>
+                        <a 
+                            class="small-button" 
+                            href="{{ route('users.account.tests.page', [ 'id' => $user->id ]) }}"
+                        >
+                            Посмотреть результаты тестирований 
+                        </a>
+                        <a 
+                            class="small-button" 
+                            href="{{ route('users.account.info.page', [ 'id' => $user->id ]) }}"
+                        > 
+                            Посмотреть анкету 
+                        </a>
+                    </td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
+    @endif
+
     @include('templates.footer')
 </body>
 </html>

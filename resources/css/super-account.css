@@ -1,0 +1,100 @@
+.small-button {
+
+    height: 10%;;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    width: auto;
+    display: block;
+    color: #A60000;
+    background-color: #fff;
+    border: 1px solid #A60000;
+    margin: auto;
+    font-weight: normal; 
+    font-size: 14px;
+
+}
+
+.small-button:not(:first-child) {
+
+    margin-top: 0.5em;
+
+}
+
+.small-button:active:not(:first-child) {
+
+    margin-top: 0.5em;
+
+}
+
+.small-button:active {
+
+    height: 10%;;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    width: auto;
+    display: block;
+    color: #fff;
+    background-color: #A60000;
+    border: 1px solid #A60000;
+    margin: auto;
+    font-weight: normal; 
+    font-size: 14px;
+
+}
+
+.users-list {
+
+    margin: 10rem;
+
+}
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5rem;
+
+}
+
+th {
+
+    padding: 0.5rem;
+    background-color: #A60000;
+    color: #fff;
+    font-weight: bold; 
+    font-size: 18 px;
+    border: 1px solid #A60000;
+
+}
+
+td {
+
+    padding: 0.5rem;
+    color: #000;
+    font-size: 18 px;
+    border: 1px solid #A60000;
+
+}
+
+.questionnaire-block {
+
+    margin: 10rem;
+
+}
+
+.user-questionnaire {
+
+    width: 70%;
+    margin-top: 5rem;
+    background-color: #EEEEEE;
+    padding: 4rem 6rem 4rem 6rem;
+    text-align: center;
+
+}
+
+.grid-fields-checkboxes {
+
+    display: grid;
+    gap: 1em 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+
+}

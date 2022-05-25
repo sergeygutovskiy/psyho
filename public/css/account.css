@@ -9,7 +9,7 @@ a {
 }
 
 .account-info {
-    margin: 4rem 8rem;
+    margin: 4rem 10rem;
     display: grid;
     grid-template-columns: auto auto;
     -moz-column-gap: 8rem;

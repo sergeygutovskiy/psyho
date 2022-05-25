@@ -2162,7 +2162,56 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+var answersCheckboxs = document.querySelectorAll('[name*="question-"]');
+var submitButton = document.querySelector('#submit-form');
+
+if (submitButton) {
+  (function () {
+    var _iterator = _createForOfIteratorHelper(answersCheckboxs),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var el = _step.value;
+        el.addEventListener('change', function (e) {
+          return validate();
+        });
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+
+    submitButton.setAttribute('disabled', 'true');
+
+    var validate = function validate() {
+      var questionsIds = new Set(_toConsumableArray(answersCheckboxs).map(function (el) {
+        return el.name.split('-')[1].split('[]')[0];
+      }));
+      var checkedIds = new Set(_toConsumableArray(answersCheckboxs).map(function (el) {
+        return el.checked ? el : null;
+      }).filter(Boolean));
+      if (checkedIds.size === questionsIds.size) submitButton.removeAttribute('disabled');else submitButton.setAttribute('disabled', 'true');
+    };
+  })();
+}
 
 /***/ }),
 
@@ -19448,6 +19497,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/super-account.css":
+/*!*****************************************!*\
+  !*** ./resources/css/super-account.css ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/account.css":
 /*!***********************************!*\
   !*** ./resources/css/account.css ***!
@@ -19823,6 +19885,7 @@ process.umask = function() { return 0; };
 /******/ 			"css/login": 0,
 /******/ 			"css/edit-account": 0,
 /******/ 			"css/account": 0,
+/******/ 			"css/super-account": 0,
 /******/ 			"css/style": 0,
 /******/ 			"css/result": 0,
 /******/ 			"css/questions": 0
@@ -19875,15 +19938,16 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/account.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/edit-account.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/login.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/main.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/questionnaire.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/questions.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/result.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/style.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/account.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/edit-account.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/login.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/main.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/questionnaire.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/questions.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/result.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/style.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/questionnaire","css/main","css/login","css/edit-account","css/account","css/super-account","css/style","css/result","css/questions"], () => (__webpack_require__("./resources/css/super-account.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

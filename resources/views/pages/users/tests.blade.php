@@ -4,7 +4,7 @@
     @include('templates.head')
     <link rel="stylesheet" href="{{ asset('css/account.css') }}">
 
-    <title> Аккаунт </title>
+    <title> {{ $user->fio }} </title>
 </head>
 <body>
     @include('templates.navigation')
@@ -24,22 +24,6 @@
             <div class="user-fields">
                 <div class="field-name">Возраст</div>
                 <div class="field-content">{{ $user->age }}</div>
-            </div>
-            <div class="button-field">
-                <a 
-                    class="big-button-with-border"
-                    href="{{ route('users.account.update.page') }}"    
-                > 
-                    Редактировать профиль
-                </a>
-            </div>
-            <div class="button-field">
-                <a 
-                    class="big-button-with-border"
-                    href="{{ route('users.logout') }}"
-                > 
-                    Выйти 
-                </a>
             </div>
         </div>
     </div>

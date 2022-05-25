@@ -46,7 +46,11 @@
             </div>
             @endforeach
 
-            <button class="big-red-button" type="submit">
+            <button 
+                class="big-red-button" 
+                type="submit"
+                id="submit-form"
+            >
                 Завершить тестирование
             </button>
         </form>

@@ -67,6 +67,9 @@ class TestController extends Controller
         $session = TestSession::with('result')->find($id);
         if ( !$session->is_finished ) return redirect()->back();
 
+        if ( Auth::id() != $session->user_id && !Auth::user()->is_admin ) 
+            return redirect()->back();
+
         return view('pages.tests.sessions.result', [
             'session' => $session,
         ]);

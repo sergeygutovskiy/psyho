@@ -4,6 +4,6 @@
     </a>
 
     <a class="user-icon" href="{{ route('users.account.page') }}">
-        <img src="/images/user-icon.png" height="40">
+        <img src="{{ Auth::user()->avatar }}" height="40">
     </a>
 </div>

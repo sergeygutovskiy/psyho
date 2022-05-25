@@ -18,14 +18,26 @@
         <div class="result-content">
             <div class="grid-result-content">
                 <div class="result-card">
-                    <h4>Ваши результаты:</h4>
+                    <h4>
+                        @if ( Auth::id() != $session->user_id )
+                            Результаты:
+                        @else
+                            Ваши результаты:
+                        @endif
+                    </h4>
                     <p>
                         {{ $session->result->desc }}
                     </p>
                 </div>
 
                 <div class="result-card">
-                    <h4>Рекомендуем лично Вам</h4>
+                    <h4>
+                        @if ( Auth::id() != $session->user_id )
+                            Рекомендация:
+                        @else
+                            Рекомендуем лично Вам
+                        @endif
+                    </h4>
                     <p>
                         {{ $session->result->recommendation }}
                     </p>

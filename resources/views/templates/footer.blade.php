@@ -7,3 +7,5 @@
         <img src="/images/VK Circled.png" height="36">
     </a>
 </footer>
+
+<script src="{{ asset('/js/app.js') }}"></script>

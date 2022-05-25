@@ -3,6 +3,8 @@
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Models\Test;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/register', [ UserController::class, 'show_register_page' ])
@@ -15,14 +17,20 @@ Route::get('/login', [ UserController::class, 'show_login_page' ])
 Route::post('/login', [ UserController::class, 'login' ])
     ->name('users.login');
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function() {    
     Route::get('/', function() {
-        return view('pages.home', [ 'tests' => Test::all() ]);
+        $users = User::all()->except(Auth::id());
+        $tests = Test::all();
+
+        return view('pages.home', [ 
+            'tests' => $tests, 
+            'users' => $users
+        ]);
     })->name('home.page');
 
     Route::get('/account', [ UserController::class, 'show_account_page' ])
         ->name('users.account.page');
-    
+
     Route::get('/account/update', [ UserController::class, 'show_update_page' ])
         ->name('users.account.update.page');
 
@@ -45,4 +53,12 @@ Route::middleware('auth')->group(function() {
         Route::get('/sessions/{id}/result', [ TestController::class, 'show_session_result_page' ])
             ->name('tests.sessions.result.page');
     });
+
+    Route::get('/admin/account/{id}/tests', [ UserController::class, 'show_account_tests' ])
+        ->middleware('admin')
+        ->name('users.account.tests.page');
+
+    Route::get('/admin/account/{id}/info', [ UserController::class, 'show_account_info' ])
+        ->middleware('admin')
+        ->name('users.account.info.page');
 });

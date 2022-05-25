@@ -42,4 +42,9 @@ class User extends Authenticatable
             'question_id',
         );
     }
+
+    public function getAvatarAttribute()
+    {
+        return '/images/' . ($this->sex == 'm' ? 'avatar-male.png' : 'avatar-female.png');
+    }
 }

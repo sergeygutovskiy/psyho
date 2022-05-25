@@ -10,4 +10,5 @@ mix
     .postCss('resources/css/questions.css', 'public/css')
     .postCss('resources/css/result.css', 'public/css')
     .postCss('resources/css/style.css', 'public/css')
+    .postCss('resources/css/super-account.css', 'public/css')
     ;

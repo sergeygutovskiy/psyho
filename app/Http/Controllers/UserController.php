@@ -121,4 +121,25 @@ class UserController extends Controller
         ]);
         return redirect()->route('users.account.page');
     }
+
+    public function show_account_tests($user_id)
+    {
+        $user = User::find($user_id);
+        
+        return view('pages.users.tests', [
+            'tests' => $user->tests,
+            'user' => $user
+        ]);
+    }
+
+    public function show_account_info($user_id)
+    {
+        $user = User::find($user_id);
+        $questions = QuestionnaireQuestion::all();
+
+        return view('pages.users.info', [
+            'user' => $user,
+            'questions' => $questions
+        ]);
+    }
 }

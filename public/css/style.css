@@ -201,7 +201,11 @@ input:focus {
     font-size: 21px;
 }
 
-.big-red-button:hover {
+.big-red-button:disabled {
+    opacity: 0.5;
+}
+
+.big-red-button:not(:disabled):hover {
     color: #A60000;
     background-color: #fff;
     border: 2px solid #A60000;
