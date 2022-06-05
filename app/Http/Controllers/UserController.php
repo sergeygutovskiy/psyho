@@ -108,7 +108,7 @@ class UserController extends Controller
                 'email' => $email,
                 'sex' => $sex,
                 'age' => $age,
-                'password' => $password,
+                'password' => Hash::make($password),
             ]);
             return redirect()->route('users.account.page');
         }
