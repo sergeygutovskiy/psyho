@@ -39,7 +39,7 @@
 
             <div class="grid-fields-checkboxes">
                 @foreach ($questions as $question)
-                    @if $user->questions->contains($question->id)
+                    @if ( $user->questions->contains($question->id) )
                         <input 
                             type="checkbox" 
                             name="questions[]"
