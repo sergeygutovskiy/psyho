@@ -39,18 +39,32 @@
 
             <div class="grid-fields-checkboxes">
                 @foreach ($questions as $question)
-                    <input 
-                        type="checkbox" 
-                        name="questions[]"
-                        id="question-{{ $question->id }}" 
-                        class="checkbox"
-                        value="{{ $question->id }}"
-                        disabled
-                        checked="{{ $user->questions->contains($question->id) ? 'true' : 'false' }}"
-                    >
-                    <label for="question-{{ $question->id }}" >
-                        {{ $question->name }}
-                    </label>
+                    @if $user->questions->contains($question->id)
+                        <input 
+                            type="checkbox" 
+                            name="questions[]"
+                            id="question-{{ $question->id }}" 
+                            class="checkbox"
+                            value="{{ $question->id }}"
+                            disabled
+                            checked
+                        >
+                        <label for="question-{{ $question->id }}" >
+                            {{ $question->name }}
+                        </label>
+                    @else
+                        <input 
+                            type="checkbox" 
+                            name="questions[]"
+                            id="question-{{ $question->id }}" 
+                            class="checkbox"
+                            value="{{ $question->id }}"
+                            disabled
+                        >
+                        <label for="question-{{ $question->id }}" >
+                            {{ $question->name }}
+                        </label>
+                    @endif
                 @endforeach
             </div>
         </div>
