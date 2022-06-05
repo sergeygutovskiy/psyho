@@ -46,7 +46,7 @@
                         class="checkbox"
                         value="{{ $question->id }}"
                         disabled
-                        checked="{{ $user->questions->contains($question->id) }}"
+                        checked="{{ $user->questions->contains($question->id) ? 'true' : 'false' }}"
                     >
                     <label for="question-{{ $question->id }}" >
                         {{ $question->name }}
