@@ -97,6 +97,7 @@ select {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 7rem;
+    row-gap: 3.5rem;
     margin-top: 4rem;
     margin-bottom: 2rem;
 }
