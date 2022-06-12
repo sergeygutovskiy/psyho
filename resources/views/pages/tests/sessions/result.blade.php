@@ -26,7 +26,7 @@
                         @endif
                     </h4>
                     <p>
-                        {{ $session->result->desc }}
+                        {!! $session->result->desc !!}
                     </p>
                 </div>
 
@@ -39,7 +39,7 @@
                         @endif
                     </h4>
                     <p>
-                        {{ $session->result->recommendation }}
+                        {!! $session->result->recommendation !!}
                     </p>
                 </div>
             </div>

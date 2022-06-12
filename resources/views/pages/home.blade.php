@@ -21,7 +21,7 @@
                     {{ $test->name }}
                 </h4>
                 <p class="info-test-card-content">
-                    {{ $test->desc }}
+                    {!! $test->desc !!}
                 </p>
                 <a 
                     class="begin-button" 

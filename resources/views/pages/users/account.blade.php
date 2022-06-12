@@ -61,13 +61,13 @@
 
                 <div class="test-card-content">
                     <p>
-                        {{ $test_session->test->desc }}
+                        {!! $test_session->test->desc !!}
                     </p>
                 </div>
 
                 <div class="test-card-content">
                     <p>
-                        {{ $test_session->result->desc }}
+                        {!! $test_session->result->desc !!}
                     </p>
                 </div>
 
