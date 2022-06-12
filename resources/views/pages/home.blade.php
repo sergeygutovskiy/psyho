@@ -12,22 +12,7 @@
     <div class="available-tests">
         <h1>Доступные тесты</h1>
 
-        <div class="grid-tests-select">
-            <div class="select">
-                <select>
-                    <option value="Все категории">Все категории</option>
-                    <option value="Депрессия и стресс">Депрессия и стресс</option>
-                    <option value="Бизнес и работа">Бизнес и работа</option>
-                </select>
-            </div>
-
-            <div class="select">
-                <select>
-                    <option value="Популярные">Популярные</option>
-                    <option value="Недавно добавленные">Старые</option>
-                </select>
-            </div>
-        </div>
+        <div class="grid-tests-select"></div>
 
         <div class="grid-tests">
             @foreach ($tests as $test)
