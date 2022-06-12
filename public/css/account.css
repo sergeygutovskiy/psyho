@@ -1,1 +1,127 @@
-a{-webkit-tap-highlight-color:rgba(255,255,255,0);-webkit-tap-highlight-color:transparent;text-decoration:none}.body{background-color:#fff}.account-info{align-items:center;-moz-column-gap:8rem;column-gap:8rem;display:grid;grid-template-columns:auto auto;height:auto;justify-items:center;margin:4rem 10rem}.user-img{align-self:center;border:1px solid #a60000;border-radius:100%;display:flex;height:16rem;justify-self:center;-o-object-fit:scale-down;object-fit:scale-down;width:16rem}.user-fields{-moz-column-gap:1em;column-gap:1em;display:grid;grid-template-columns:auto auto;row-gap:2em;width:100%}.field-name{background-color:#fff;border:1px solid #a60000;color:#828282}.field-content,.field-name{display:block;font-size:18px;font-weight:400;height:100%;margin:auto;padding:1rem;width:100%}.field-content{background-color:#a60000;color:#fff}.button-field{grid-column:1/span 2}.passed-tests-block{margin:10rem}.passed-tests{display:grid;gap:2rem;margin-top:7.5rem}.grid-test-card{display:grid;grid-template-columns:auto auto;width:100%}.test-card-header{background-color:#a60000;color:#fff;font-size:21px;font-weight:700}.test-card-content,.test-card-header{display:block;height:100%;margin:auto;padding:1rem;width:100%}.test-card-content{background-color:#fff;border:1px solid #a60000;font-size:18px;font-weight:400}
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.body {
+    background-color: #fff;
+}
+
+.account-info {
+    margin: 4rem 10rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    -moz-column-gap: 8rem;
+         column-gap: 8rem;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.user-img {
+    border-radius: 100%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    border: 1px solid #A60000;
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.user-fields {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 2em;
+    width: 100%;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+}
+
+.field-role-wrapper {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.field-role {
+    padding: 1rem;
+    height: 100%;
+    display: block;
+    border: 1px solid #A60000;
+    color: #A60000;
+    background-color: #fff;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.field-name {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #A60000;
+    color: #828282;
+    background-color: #fff;
+    margin: auto;
+    font-weight: normal; 
+    font-size: 18px;
+}
+
+.field-content {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #A60000;
+    color: #fff;
+    margin: auto;
+    font-weight: normal; 
+    font-size: 18px;
+}
+
+.button-field {
+    grid-column: 1 / span 2;
+}
+
+.passed-tests-block {
+    margin: 10rem;
+}
+
+.passed-tests {
+    margin-top: 7.5rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-test-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+.test-card-header {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #A60000;
+    color: #fff;
+    margin: auto;
+    font-weight: bold; 
+    font-size: 21px;
+}
+
+.test-card-content {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #A60000;
+    background-color: #fff;
+    margin: auto;
+    font-weight: normal; 
+    font-size: 18px;
+}

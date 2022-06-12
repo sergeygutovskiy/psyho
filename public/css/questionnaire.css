@@ -1,1 +1,42 @@
-body{background:url(/images/maroon-scratch-lines.png);background-size:auto}.questionnaire{align-items:center;height:70%;justify-items:center;margin:10em auto;width:70%}.questionnaire,.questionnaire-form{background-color:#eee;position:relative}.questionnaire-form{display:block;padding:80px;text-align:center}.questionnaire-form-fields{margin-bottom:52px;margin-top:64px}.grid-fields-checkboxes{display:grid;gap:1em 1.5em;grid-template-columns:repeat(2,1fr)}#age_input{border-bottom:1px solid #a60000;height:auto;margin-bottom:.5rem;padding-bottom:.5rem;padding-top:.5rem}
+body {
+    background: url('/images/maroon-scratch-lines.png');
+    background-size: auto;
+}
+
+.questionnaire {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    margin: 10em auto;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-items: center;
+}
+
+.questionnaire-form {
+    position: relative;
+    text-align: center;
+    background-color: #EEEEEE;
+    padding: 80px;
+    display: block;
+}
+
+.questionnaire-form-fields {
+    margin-bottom: 52px;
+    margin-top: 64px;
+}
+
+.grid-fields-checkboxes {
+    display: grid;
+    gap: 1em 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#age_input {
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #A60000;
+    height: auto;
+}
+

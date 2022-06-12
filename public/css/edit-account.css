@@ -1,1 +1,21 @@
-body{background-color:#fff}.edit{align-items:center;height:50%;justify-items:center;margin:10em auto;width:50%}.edit,.edit-form{background-color:#eee;position:relative}.edit-form{display:block;padding:80px;text-align:center}
+body {
+    background-color: #fff;
+}
+
+.edit {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin:  10em auto;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-items: center;
+}
+
+.edit-form {
+    position: relative;
+    text-align: center;
+    background-color: #EEEEEE;
+    padding: 80px;
+    display: block;
+}

@@ -13,6 +13,13 @@
         <img src="{{ $user->avatar }}" class="user-img">
 
         <div class="user-fields">
+            @if ( Auth::user()->is_admin )
+                <div class="field-role-wrapper">
+                    <div class="field-role">
+                        #Специалист
+                    </div>
+                </div>
+            @endif
             <div class="field-name">ФИО</div>
             <div class="field-content">{{ $user->fio }}</div>
             <div class="field-name">Email</div>
